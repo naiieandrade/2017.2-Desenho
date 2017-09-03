@@ -1,0 +1,9 @@
+
+.gitignore
+.idea/2017.2-Desenho.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/inspectionProfiles
+db.sqlite3
