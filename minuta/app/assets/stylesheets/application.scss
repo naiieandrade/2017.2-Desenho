@@ -1,0 +1,283 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+
+ *= require_self
+ */
+
+// Importing of bootswatch's flat theme for bootstrap
+@import "bootstrap-sprockets";
+
+@import "bootswatch/flatly/variables";
+
+@import "bootstrap";
+
+// remember: bootstrap is a 'mobile first' framework
+
+body {
+  padding-top: 3em;
+}
+
+tr,
+th,
+td{
+  border: 1px solid black;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.btn-purple{
+ background-color: #9768D1;
+ color: white;
+}
+
+.custom-white-txt{
+  color: white;
+  padding-top: 19.5px;
+  padding-bottom: 19.5px;
+  padding-left: 10px;
+  float: right;
+}
+
+.btn-royal-purple{
+ color: white;
+ background-color: #673aa8;
+}
+
+.btn-jacarta{
+ color: white;
+ background-color: #452b6e;
+}
+
+.btn-mojo{
+ color: white;
+ background-color: #c73f3f;
+}
+
+.btn-crown-of-thorns{
+ background-color: #782323;
+ color: white;
+}
+
+.btn-royal-purple:hover{
+ background-color: #45188e;
+ color: white;
+}
+
+.btn-jacarta:hover{
+ background-color: #23094c;
+ color: white;
+}
+
+.btn-mojo:hover{
+ background-color: #a51d1d;
+ color: white;
+}
+
+.btn-crown-of-thorns:hover{
+ background-color: #560101;
+ color: white;
+}
+
+.btn-purple:hover{
+ background-color: #7B52AB;
+}
+
+.grade-group{
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.btn-shades{
+ background-color: #555;
+ color: white;
+}
+
+.btn-shades:hover{
+ background-color: #aaa;
+ color: white;
+}
+
+.hub-item{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.class-name{
+  font-size: 2.25em;
+}
+
+.btn-radio {
+  color: black;
+  background-color: white;
+  border-color: #ECF0F1;
+}
+
+.btn-radio:focus,
+.btn-radio.focus {
+  color: black;
+  background-color: #ECF0F1;
+}
+
+.btn-radio:hover {
+  color: black;
+  background-color: #ECF0F1;
+}
+
+.btn-radio:active,
+.btn-radio.active,
+.open > .dropdown-toggle.btn-radio {
+  color: black;
+  background-color: #ECF0F1;
+}
+
+.btn-radio:active:hover,
+.btn-radio.active:hover,
+.open > .dropdown-toggle.btn-radio:hover,
+.btn-radio:active:focus,
+.btn-radio.active:focus,
+.open > .dropdown-toggle.btn-radio:focus,
+.btn-radio:active.focus,
+.btn-radio.active.focus,
+.open > .dropdown-toggle.btn-radio.focus {
+  background-color: #ECF0F1;
+  color: black;
+}
+
+.btn-radio:active,
+.btn-radio.active,
+.open > .dropdown-toggle.btn-radio {
+  background-image: none;
+  color: black;
+}
+
+.btn-radio.disabled:hover,
+.btn-radio[disabled]:hover,
+fieldset[disabled] .btn-radio:hover,
+.btn-radio.disabled:focus,
+.btn-radio[disabled]:focus,
+fieldset[disabled] .btn-radio:focus,
+.btn-radio.disabled.focus,
+.btn-radio[disabled].focus,
+fieldset[disabled] .btn-radio.focus {
+  background-color: #ECF0F1;
+  color: black;
+}
+
+.btn-radio .badge {
+  color: #2c3e50;
+  background-color: #ECF0F1;
+  color: black;
+}
+
+.navbar-style{
+  background-color: #782323;
+}
+
+.btn-file {
+  color: #2C3E50;
+  background-color: #ECF0F1;
+  border-color: #ECF0F1;
+}
+
+.btn-file:focus,
+.btn-file.focus {
+  color: #2C3E50;
+  background-color: #ECF0F1;
+}
+
+.btn-file:hover {
+  color: #2C3E50;
+  background-color: #ECF0F1;
+}
+
+.btn-file:active,
+.btn-file.active,
+.open > .dropdown-toggle.btn-file {
+  color: #2C3E50;
+  background-color: #ECF0F1;
+}
+
+.btn-file:active:hover,
+.btn-file.active:hover,
+.open > .dropdown-toggle.btn-file:hover,
+.btn-file:active:focus,
+.btn-file.active:focus,
+.open > .dropdown-toggle.btn-file:focus,
+.btn-file:active.focus,
+.btn-file.active.focus,
+.open > .dropdown-toggle.btn-file.focus {
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+.btn-file:active,
+.btn-file.active,
+.open > .dropdown-toggle.btn-file {
+  background-image: none;
+  color: #2C3E50;
+}
+
+.btn-file.disabled:hover,
+.btn-file[disabled]:hover,
+fieldset[disabled] .btn-file:hover,
+.btn-file.disabled:focus,
+.btn-file[disabled]:focus,
+fieldset[disabled] .btn-file:focus,
+.btn-file.disabled.focus,
+.btn-file[disabled].focus,
+fieldset[disabled] .btn-file.focus {
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+.btn-file .badge {
+  color: #2c3e50;
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+// -----------------------------------------------------------------------------
+// media queries below this point
+
+@media(min-width:767px) {
+  .navbar-nav{
+    float: right;
+  }
+
+  .custom-white-txt{
+   color: white;
+    padding-top: 19.5px;
+    padding-bottom: 19.5px;
+    padding-left: 10px;
+    float: left;
+  }
+
+  #hub #hub-grid{
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all 0.7s linear;
+    transition-delay: 0.2s;
+  }
+
+  #hub:hover #hub-grid{
+    opacity: 1;
+    height: 12em;
+  }
+}
+
+
+@import "bootswatch/flatly/bootswatch";

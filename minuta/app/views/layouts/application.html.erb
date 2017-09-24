@@ -2,13 +2,19 @@
 <html>
   <head>
     <title>Minuta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- reminder: ADD FAVICON == STATUS BOOST x8000 -->
   </head>
-
   <body>
     <%= yield %>
+  <footer>
+    <div class="container text-center text-muted">
+      <p>&copy; GPL-v.3</p>
+    </div>
+  </footer>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval' => false %>
   </body>
 </html>
