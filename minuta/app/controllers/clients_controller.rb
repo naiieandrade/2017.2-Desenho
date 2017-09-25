@@ -39,7 +39,7 @@ class ClientsController < ApplicationController
   def update
     
     if @client.update(client_params)
-      flash[:notice] = "Cliente alterado(a) com sucesso"
+      flash[:now] = "Cliente alterado(a) com sucesso"
       redirect_to @client
     else
       render 'edit'
@@ -47,9 +47,10 @@ class ClientsController < ApplicationController
   end
 
   def destroy
+    @client = Client.find(params[:id])
     @client.destroy
-      flash[:notice] = "Cliente excluido(a) com sucesso"
-      redirect_to clients_url
+    flash[:alert] = "Cliente (a) excluído(a) com sucesso"
+    redirect_to clients_path
   end
 
   private
