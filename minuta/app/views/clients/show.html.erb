@@ -1,0 +1,21 @@
+<section class="content-section" id="alumns-desc">
+  <div class="container">
+    <div class="pull-right">
+        <%= link_to '<span class="fa fa-edit"></span>Editar'.html_safe, edit_client_path(@client), class:"btn btn-sm btn-default" %>
+        
+        <%= link_to '<span class="fa fa-times"></span>Excluir'.html_safe, "", method: :delete, class:'btn btn-sm btn-danger', data: { confirm: 'Tem certeza? Essa alteração não pode ser desfeita.'}, name:"delete"  %>
+      	<%= link_to '<span class="fa fa-address-card"></span> Voltar'.html_safe, clients_path, class:'btn btn-sm btn-warning' %>
+    </div>
+    <div class="row item">
+      <div class="col-sm-12 col-md-4">
+        <%= image_tag("avatar_250x300.png", alt: "", class: "img-responsive" ) %>
+      </div>
+      <div class="col-sm-12 col-md-8 text-capitalize descript">
+        <h3 class="">Nome: <%= @client.name_client %></h3>
+        <h4 class="">Telefone: <%= @client.phone_client %></h4>
+        <h4 class="">CPF: <%= @client.cpf %></h4>
+        <h4 class="">Data de Nascimento: <%= @client.birth_date %></h4>
+      </div>
+    </div>
+  </div>
+</section>
