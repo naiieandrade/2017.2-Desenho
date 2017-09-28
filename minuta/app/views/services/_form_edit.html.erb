@@ -1,0 +1,78 @@
+<%= form_for @service, :html => { :multipart => true }  do |f| %>
+  <% if @service.errors.any? %>
+    <div class="container">
+      <div class="text-danger text-justify">
+        <div id="error_explanation">
+          <h2 class=""><%= pluralize(@service.errors.count, "erro") %> proibiram este formulario de ser salvo:</h2>
+          <ul>
+          <% @service.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <html lang="en">
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+      <!-- Website CSS style -->
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+      <!-- Website Font style -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+      <title>Admin</title>
+    </head>
+    <body>
+      <div class="container">
+        <div class="row main">
+          <div class="panel-heading">
+                   <div class="panel-title text-center">
+                      <h1 class="title">Editar o servicee : <%=@service.name_service %></h1>
+                      <hr />
+                    </div>
+                </div>
+          <div class="main-login main-center">
+            <form class="form-horizontal" method="post" action="#">
+
+              <div class="form-group">
+                <%= f.label :time, class:"sr-only" %>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="fa fa-user"></span>
+                     Horário
+                  </span>
+                  <%= f.time_field :time, class:"form-control", placeholder:"Horário" %>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :date, class:"sr-only" %>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="fa fa-gift"></span>
+                     Data
+                  </span>
+                  <%= f.date_field :date, class:"form-control", placeholder:"Ex.: dd/mm/aaaa" %>
+                </div>
+              </div>
+
+              <%= link_to '<span class="fa fa-address-card"></span> Voltar'.html_safe, service_path(@service), class:'btn btn-lg btn-warning' %>
+              <%= f.button '<span class="fa fa-check"></span> Salvar'.html_safe, type:"submit", class:'btn btn-lg btn-success' %>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    </body>
+  </html>
+<% end %>
