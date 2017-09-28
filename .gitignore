@@ -6,4 +6,8 @@
 .idea/vcs.xml
 .idea/workspace.xml
 .idea/inspectionProfiles
+/minuta/tmp
+/minuta/db/development.sqlite3
+/minuta/log
+
 db.sqlite3
