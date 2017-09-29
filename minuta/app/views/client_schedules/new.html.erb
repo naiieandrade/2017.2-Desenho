@@ -1,0 +1,21 @@
+<section class="content-section" id="create">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h1 class="text-center text-uppercase">
+          <span class="fa fa-user-plus"></span> Criar Serviço
+        </h1>
+        <%= form_for @client_schedule, url: {action: "create"} do |f| %>
+
+
+          <div class="col-sm-12 col-md-8 text-capitalize descript">
+            <h4 class="">Horário: <%= @schedule.time %></h4>
+            <h4 class="">Data: <%= @schedule.date %></h4>
+          </div>
+          
+          <%= f.submit "Confirmar Agendamento"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
