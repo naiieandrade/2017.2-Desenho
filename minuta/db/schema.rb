@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170928234405) do
+ActiveRecord::Schema.define(version: 20171002053242) do
 
   create_table "client_schedules", force: :cascade do |t|
     t.integer  "client_id"
@@ -22,14 +22,20 @@ ActiveRecord::Schema.define(version: 20170928234405) do
   end
 
   create_table "clients", force: :cascade do |t|
-    t.string   "name_client"
-    t.string   "birth_date"
-    t.string   "cpf"
-    t.string   "phone_client"
-    t.string   "email_client"
-    t.string   "password_client"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_employees_on_owner_id"
+  end
+
+  create_table "owners", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -44,6 +50,17 @@ ActiveRecord::Schema.define(version: 20170928234405) do
     t.float    "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "birth_date"
+    t.string   "cpf"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
