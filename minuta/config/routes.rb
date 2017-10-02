@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :client_schedules
   end
   resources :services
+  resources :professionals
 
 end
